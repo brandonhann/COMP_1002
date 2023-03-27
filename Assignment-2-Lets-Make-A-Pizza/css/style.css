@@ -1,0 +1,306 @@
+/* GENERAL STYLING */
+
+body {
+  margin: 0;
+  background-color: #f8f3ec;
+  background: linear-gradient(#d1c6b2, #f8f3ec);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1, h2 {
+  font-size: 24px;
+}
+
+h3, h4 {
+  font-size: 18px;
+}
+
+/* NAVIGATION STYLING */
+
+.page-header {
+  background-color: #a5714f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  font-size: 24px;
+  font-family: "Tilt Warp", cursive !important;
+  border-radius: 6px;
+  margin: 1rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  background-image: url("../img/bg.png");
+  background-size: 50%;
+}
+
+/* NAV LEFT SIDE */
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f8f3ec;
+}
+
+.header-logo a span {
+  padding-left: 10px;
+}
+
+.header-logo img {
+  height: 5rem;
+}
+
+.slogan {
+  list-style: none;
+  font-style: italic;
+  font-size: 18px;
+  padding-left: 8px;
+  color: #f8f3ec;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+/* NAV RIGHT SIDE */
+
+.page-header nav {
+  display: flex;
+  justify-content: center;
+}
+
+.page-header nav menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header nav menu li {
+  margin: 0 1rem;
+  white-space: nowrap;
+}
+
+.page-header nav menu li a {
+  font-size: 1.2rem;
+  color: #f8f3ec;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.page-header nav menu li a:hover {
+  background-color: #755139;
+}
+
+.page-header nav menu li a i {
+  margin: 0 0 0 8px;
+}
+
+/* MAIN CONTENT STYLING (CONTENT BETWEEN HEADER & FOOTER) */
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+  margin: 1rem;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+main section {
+  background-color: #f8f3ec;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  color: #000;
+  background-image: url("../img/bg.png");
+  background-size: cover;
+}
+
+/* ORDER FORM (STYLES 3 CONTAINERS LEFT OF SCREEN) */
+
+.order-form {
+  display: grid;
+  grid-template-columns: 7fr 7fr 6fr;
+  grid-gap: 1rem;
+  height: 60%;
+  font-size: 16px;
+}
+
+.order-form div {
+  max-height: 520px;
+}
+
+
+/* 1ST AND 2ND GRID CONTAINER */
+
+.order-form div:nth-child(1) div {
+  margin-top: 16px;
+}
+.order-form div:nth-child(1),
+.order-form div:nth-child(2) {
+  background-color: #e9decb;
+  border: 2px solid #8d8985;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.order-form div:nth-child(2) {
+  overflow-y: scroll;
+}
+
+.order-form div:nth-child(2) span {
+  background-color: #f8f3ec;
+  padding: 5px;
+  border-radius: 6px;
+  margin-right: 6px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* INPUTS */
+
+.order-form div input[type="text"],
+.order-form div input[type="email"],
+.order-form div input[type="tel"],
+.order-form div input[type="range"],
+.order-form div select,
+.order-form div textarea {
+  background-color: #f8f3ec;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+  font-size: 16px;
+}
+input[type="submit"] {
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #004200;
+  background-color: #45a049;
+}
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.tlabel-title { /* ADD A LINE BREAK */
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* 3RD GRID CONTAINER (CHEF IMAGE) */
+.chef {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .chef img {
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+/* DELIVERY INPUT DROPDOWN FUNCTIONALITY */
+.delivery-dropdown {
+  display: none;
+}
+input[type="checkbox"]#delivery:checked + .delivery-dropdown {
+  display: block;
+}
+
+
+/* PAYMENT FORM STYLING*/
+
+.payment-box input {
+  background-color: #f8f3ec;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-size: 16px;
+  resize: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border-radius: 6px;
+  background-color: #e9decb;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-height: 520px;
+}
+
+fieldset legend {
+  font-size: 18px;
+}
+
+/* CUSTOM SCROLLBAR STYLING FOR "CUSTOMIZE" CONTAINER */
+
+.order-form div:nth-child(2)::-webkit-scrollbar {
+  width: 10px;
+}
+
+.order-form div:nth-child(2)::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.order-form div:nth-child(2)::-webkit-scrollbar-thumb {
+  background: #a5714f;
+  border-radius: 6px;
+}
+
+.order-form div:nth-child(2)::-webkit-scrollbar-thumb:hover {
+  background: #7e573c;
+}
+
+/* FOOTER STYLING */
+
+footer {
+  padding: 50px;
+  bottom: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #444343;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+footer div p a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer div p a:hover {
+  text-decoration: underline;
+}

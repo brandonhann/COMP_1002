@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="CSS Flexbox and Grid" />
+    <meta name="robots" content="index, follow" /> <!-- Active bussiness website so turn on robots -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet" />
+
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/74bd775b1c.js" crossorigin="anonymous"></script>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
+    <!-- DOCUMENT TITLE -->
+    <title>Mama' Mia - Order</title>
+    
+  </head>
+  <body>
+    <!-- NAVIGATION START -->
+    <header class="page-header">
+
+      <!-- LEFT SIDE -->
+      <div class="header-logo">
+        <!-- BRAND LOGO & NAME -->
+        <a href="index.html">
+          <img src="./img/logo.png" alt="Mama' Mia Logo" />
+          <span>Mama' Mia Pizza</span>
+        </a>
+        <!-- SLOGAN -->
+        <p class="slogan">- "a pizza you cant'a beat 🤌"</p>
+      </div>
+
+      <!-- (RIGHT SIDE) -->
+      <nav>
+        <menu>
+          <li>
+            <a href="index.html">Home<i class="fa-solid fa-house"></i></a>
+          </li>
+          <li>
+            <a href="index.html"
+              >Order<i class="fa-solid fa-pizza-slice"></i
+            ></a>
+          </li>
+          <li>
+            <a href="index.html"
+              >Locations<i class="fa-solid fa-location-dot"></i
+            ></a>
+          </li>
+          <li>
+            <a href="index.html"
+              >About Us<i class="fa-solid fa-circle-question"></i
+            ></a>
+          </li>
+        </menu>
+      </nav>
+    </header>
+    <!-- NAVIGATION END -->
+
+    <!-- MAIN CONTENT START -->
+    <main>
+      <!-- ORDER CONTAINER -->
+      <section>
+        <h1>Order Pizza</h1>
+        <p>
+          Purchase a delicious fresh wood fired pizza from Mama' Mia! Limited time
+          offer - Extra Large is now 15% off.
+        </p>
+        <form class="order-form" method="post">
+          <!-- CONTAINER 1 (USER INFO) -->
+          <div>
+            <h3>Information</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="delivery">Delivery:</label>
+            <input type="checkbox" id="delivery" name="delivery" required />
+
+            <div class="delivery-dropdown">
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" />
+
+              <label for="postal-code">Postal code:</label>
+              <input type="text" id="postal-code" name="postal-code" />
+            </div>
+          </div>
+
+          <!-- CONTAINER 2 (CUSTOMIZE PIZZA) -->
+          <div>
+            <h4>Customize</h4>
+            <label for="pizza-quantity">Pizza Quantity: 1</label> <!-- probably gonna need some js for this one lol -->
+            <input type="range" id="pizza-quantity" name="pizza-quantity" min="1" max="10" value="1"/>
+
+            <!-- SIZE, AMOUNT, SAUCE, CRUST & CHEESE -->
+            
+            <label for="pizza-size">Pizza Size:</label>
+            <select id="pizza-size" name="pizza-size">
+              <option value="sm">Small</option>
+              <option value="md">Medium</option>
+              <option value="lg" selected>Large</option>
+              <option value="xl">Extra Large</option>
+            </select>
+
+            <label for="crust">Crust:</label>
+            <select id="crust" name="crust">
+              <option value="thin-crust">Thin Crust</option>
+              <option value="regular-crust" selected>Regular Crust</option>
+              <option value="thick-crust">Thick Crust</option>
+              <option value="thick-crust">Gluten Free Crust</option>
+            </select>
+
+            <label for="sauce">Sauce:</label>
+            <select id="sauce" name="sauce">
+              <option value="tomato" selected>Tomato Sauce</option>
+              <option value="pesto">Pesto Sauce</option>
+              <option value="bbq">BBQ Sauce</option>
+              <option value="none">No Sauce</option>
+            </select>
+
+            <label for="style">Style:</label>
+            <select id="style" name="style">
+              <option value="lightlydone">Lightly Done</option>
+              <option value="mediumdone" selected>Medium Done</option>
+              <option value="welldone">Well Done</option>
+            </select>
+
+            <label for="cheese">Cheese:</label>
+            <select id="cheese" name="cheese">
+              <option value="lightlydone">No Cheese</option>
+              <option value="mediumdone" selected>Regular Cheese</option>
+              <option value="welldone">Extra Cheese</option>
+            </select>
+
+            <!-- TOPPINGS -->
+
+            <p class="tlabel-title">Toppings:</p>
+            <span>
+              <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni"/>
+              <label for="pepperoni">Pepperoni</label>
+            </span>
+            <span>
+              <input type="checkbox" id="sausage" name="sausage" value="sausage"/>
+              <label for="sausage">Sausage</label>
+            </span>
+            <span>
+              <input type="checkbox" id="mushrooms" name="mushrooms" value="mushrooms"/>
+              <label for="mushrooms">Mushrooms</label>
+            </span>
+            <span>
+              <input type="checkbox" id="onions" name="onions" value="onions"/>
+              <label for="onions">Onions</label>
+            </span>
+            <span>
+              <input type="checkbox" id="peppers" name="peppers" value="peppers"/>
+              <label for="peppers">Peppers</label>
+            </span>
+            <span>
+              <input type="checkbox" id="olives" name="olives" value="olives"/>
+              <label for="olives">Olives</label>
+            </span>
+            <span>
+              <input type="checkbox" id="ham" name="ham" value="ham" />
+              <label for="ham">Ham</label>
+            </span>
+            <span>
+              <input type="checkbox" id="bacon" name="bacon" value="bacon" />
+              <label for="bacon">Bacon Bits</label>
+            </span>
+
+            <!-- SPECIAL INSTRUCTIONS -->
+            <div>
+              <label for="special">Special Instructions:</label>
+              <textarea name="special" id="special"></textarea>
+            </div>
+          </div>
+
+          <!-- CONTAINER 3 (PAYMENT INFO) -->
+          <div>
+          <!-- CC TYPE SELECTION FIELDSET -->
+          <fieldset>
+            <legend>Payment Method</legend>
+            <label for="visa">
+              <input type="radio" name="creditMethod" id="visa" value="visa" checked />Visa </label>
+            <label for="mastercard">
+            <input type="radio" name="creditMethod" id="mastercard" value="mastercard"/>Mastercard</label>
+          </fieldset>
+
+          <!-- CC INFO FIELDSET -->
+          <fieldset class="payment-box" id="toggle1">
+            <legend>Credit Card Information</legend>
+            <label for="ccname">Name on Card:</label>
+            <input type="text" name="ccname" id="ccname" />
+            <label for="ccnumber">Credit Card Number:</label>
+            <input type="number" name="ccnumber" id="ccnumber" />
+            <label for="expdate">Expiration Date:</label>
+            <input type="date" name="expdate" id="expdate" />
+            <label for="securitycode">Security Code:</label>
+            <input type="number" name="securitycode" id="securitycode" />
+          </fieldset>
+          <input type="submit" id="submit" value="Submit Order" />
+          </div>
+          
+        </form>
+      </section>
+
+      <!-- CHEF IMG SECTION -->
+      <section>
+        <div class="chef">
+          <img src="./img/chef.png" alt="A chef holding a pizza" />
+        </div>
+      </section>
+    </main>
+
+    <!-- MAIN CONTENT END -->
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2023 Mama' Mia. All rights reserved.</p>
+      <div>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="index.html">Order</a></p>
+        <p><a href="index.html">Locations</a></p>
+        <p><a href="index.html">About</a></p>
+        <p><a href="index.html">Careers</a></p>
+        <p><a href="index.html">Catering</a></p>
+        <p><a href="index.html">Gift Cards</a></p>
+        <p><a href="index.html">Privacy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- 
+IMAGE CREDIT
+Chef: https://c8.alamy.com/comp/2F4HH0P/cute-cartoon-italian-chef-holding-pizza-funny-restaurant-character-vector-clip-art-illustration-2F4HH0P.jpg
+Logo: https://image.similarpng.com/very-thumbnail/2020/05/Pizza-logo-design-template-Vector-PNG.png
+-->
