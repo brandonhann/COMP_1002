@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Retro Product Micro-Site" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/globals.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img//favicon.png">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/74bd775b1c.js" crossorigin="anonymous"></script>
+
+    <!-- Javscript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/components.js"></script>
+
+    <title>Spin City - Contact</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <!-- Introduction Contact Message Section -->
+        <section class="contact-message">
+            <h1>Dear valued customer,</h1>
+            <p>
+                Thank you for your interest in Spin City. We would love to hear from you! Please use the contact form
+                below to get in touch with us if you have any questions, concerns, or feedback. Our team is dedicated to
+                providing you with exceptional customer service and we look forward to hearing from you.
+            </p>
+            <p>Best regards,</p>
+            <p>Spin City</p>
+        </section>
+        <!-- Contact Box Form Section -->
+        <section class="contact-box">
+            <h2>Contact Us</h2>
+            <!-- Contact Form -->
+            <form action="./php/send-email.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <!-- Extra Contact & Company Info -->
+            <div>
+                <p><a href="mailto:help@spincity.com">help@spincity.com</a></p>
+                <p><i class="fa-solid fa-map-pin"></i> 123 Main Street, Suite 456</p>
+                <p>Toronto, ON LZN010</p>
+                <p>Canada</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+</body>
+
+</html>

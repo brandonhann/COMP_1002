@@ -1,0 +1,260 @@
+/* Set series 1 visible as default and 2-4 not visible */
+
+#series-1 {
+    display: flex;
+}
+
+#series-2,
+#series-3,
+#series-4 {
+    display: none;
+}
+
+/* General Styles */
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 90px;
+    width: 100%;
+}
+
+/* Category Styles */
+main .category {
+    width: 20%;
+    background-color: #ffedd5;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 360px;
+}
+
+main .category h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #431407;
+}
+
+main .category ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+main .category li {
+    margin-bottom: 10px;
+    color: #431407;
+    font-size: 18px;
+    background-color: #fdba74;
+    transition: background-color 0.3s ease;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main .category li:hover {
+    cursor: pointer;
+    background-color: #fb923c;
+}
+
+main .category ul .active {
+    color: #1a2e05;
+    background-color: #bef264;
+}
+
+main .category a:hover {
+    color: #7c2d12;
+}
+
+/* Product Section Grid Styles */
+main .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+main .product-grid .product-card {
+    display: grid;
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #ffedd5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+main .product-grid .product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+main .product-grid .product-card h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+main .product-grid .product-card p {
+    font-size: 16px;
+    color: #7c2d12;
+    margin-bottom: 10px;
+}
+
+main .product-grid .product-card a {
+    background-color: #431407;
+    transition: background-color 0.3s ease;
+    margin: auto;
+    padding: 10px 20px;
+    width: 140px;
+    text-align: center;
+    color: #fff7ed;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+main .product-grid .product-card .price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #16a34a;
+}
+
+main .product-grid .product-card .price .sale {
+    width: 25px;
+}
+
+main .product-grid .product-card a:hover {
+    background-color: #7c2d12;
+}
+
+/* Animation Classes */
+.category {
+    animation: fade-in-down 0.7s ease-out forwards;
+    opacity: 0;
+}
+
+.product-grid {
+    animation: fade-in 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Animation Keyframes */
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+
+    main .category {
+        width: 30%;
+    }
+
+    main .product-grid {
+        width: 65%;
+    }
+
+    main .product-grid .product-card {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding-top: 0;
+        margin-top: 20px;
+    }
+
+    main .category {
+        height: auto;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    main .category ul {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    main .category ul li {
+        padding: 4px;
+        box-shadow: none;
+    }
+
+    main .product-grid {
+        width: 90%;
+        margin: auto;
+    }
+
+    .category {
+        animation: none;
+        opacity: 1;
+    }
+
+    .product-grid {
+        animation: none;
+        opacity: 1;
+    }
+
+}
+
+@media (max-width: 480px) {
+    main .category {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    main .category ul li a {
+        font-size: 16px;
+    }
+
+    main .product-grid {
+        width: 90%;
+    }
+
+    main .product-grid .product-card {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    main .category ul li {
+        font-size: 14px;
+    }
+}
